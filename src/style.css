@@ -2,11 +2,25 @@ body {
     background-image: url(/images/piggy.jpg);
 }
 
+:root{
+    --border-color: green;
+    --primary-color: rgb(248, 130, 149);
+    --box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
 form {
     margin-top: 100px;
 }
 
 .form-control{
-color: aliceblue;
-    
+    box-shadow: var(--box-shadow);
+  
+}
+
+.form-label{
+    color: var(--primary-color);
+}
+
+.sign-in{
+    box-shadow: var(--box-shadow);
 }
