@@ -1,5 +1,13 @@
 body {
     background-image: url(/images/piggy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width: 768px){
+    body{
+        background-size: contain;
+    }
 }
 
 :root{
