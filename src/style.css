@@ -1,3 +1,7 @@
-body{
-    background-image: url("images/piggy.jpg");
+body {
+    background-image: url(/images/piggy.jpg);
+}
+
+form {
+    margin-top: 100px;
 }
