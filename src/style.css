@@ -1,4 +1,4 @@
-body {
+.wallpaper {
     background-image: url(/images/piggy.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,13 +11,22 @@ body {
 }
 
 :root{
-    --border-color: green;
+    --border-color: rgb(29, 173, 29);
     --primary-color: rgb(248, 130, 149);
     --box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
-form {
+h1{
+    text-align: center;
+    color: var(--border-color);
+}
+
+.main-form {
     margin-top: 100px;
+}
+
+.second-form{
+    margin-top: 50px;
 }
 
 .form-control{
@@ -31,4 +40,11 @@ form {
 
 .sign-in{
     box-shadow: var(--box-shadow);
+}
+
+.underline-input {
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    outline: none;
+    
 }
