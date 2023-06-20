@@ -4,6 +4,10 @@
     background-size: cover;
 }
 
+.second-wallpaper{
+    background: var(--background);
+}
+
 @media(max-width: 768px){
     body{
         background-size: contain;
@@ -14,11 +18,12 @@
     --border-color: rgb(29, 173, 29);
     --primary-color: rgb(248, 130, 149);
     --box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    --background: rgb(252, 221, 195);
 }
 
 h1{
     text-align: center;
-    color: var(--border-color);
+    color: var(--primary-color);
 }
 
 .main-form {
@@ -43,8 +48,14 @@ h1{
 }
 
 .underline-input {
+    background-color: var(--background);
     border: none;
     border-bottom: 2px solid var(--primary-color);
     outline: none;
     
+}
+
+.log-button{
+    padding: 0;
+    border-radius: 10px 30px;
 }
