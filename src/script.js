@@ -7,7 +7,7 @@ function displayAmount(event) {
   let display = document.querySelector("#display-amount");
   
 
-  display.innerHTML = (inputName.value) + ":" + "R" + amount;
+  display.innerHTML = (inputName.value) + " : " + "R " + amount;
 }
 
 let button = document.querySelector("#log-button");
