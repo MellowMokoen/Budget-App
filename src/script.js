@@ -14,8 +14,8 @@ function displayAmount(event) {
   let displayResults = document.querySelector("#display-results");
   displayResults.appendChild(displayElement);
 
-  document.querySelector("#inputName").value = "";
-  
+  inputName.value = "";
+  inputAmount.value = "";
 
 }
 
@@ -32,10 +32,11 @@ let amount = parseFloat(inputAmount.value);
 
 let finalAmount = userSalary - amount;
 
-let resultAmount = document.querySelector("#amount");
-resultAmount.textContent = "R " + finalAmount.toFixed(2);
+let resultAmount = document.querySelector("#balance-check");
+resultAmount.textContent = "Expenses Total : R " + finalAmount.toFixed(2);
 
-
+inputSalary.value = "";
+inputAmount.value = "";
 }
 
 
