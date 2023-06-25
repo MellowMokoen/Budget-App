@@ -15,12 +15,29 @@ function displayAmount(event) {
   displayResults.appendChild(displayElement);
 
   document.querySelector("#inputName").value = "";
-  document.querySelector("#amount").value = "";
+  
 
 }
 
 let button = document.querySelector("#log-button");
 button.addEventListener("click",displayAmount);
+
+function subtractAmount() {
+
+let inputSalary = document.querySelector("#underline-input");
+let inputAmount = document.querySelector("#amount");
+
+let userSalary = parseFloat(inputSalary.value);
+let amount = parseFloat(inputAmount.value);
+
+let finalAmount = userSalary - amount;
+
+let resultAmount = document.querySelector("#amount");
+resultAmount.textContent = "R " + finalAmount.toFixed(2);
+
+
+}
+
 
 
 

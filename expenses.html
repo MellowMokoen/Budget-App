@@ -26,33 +26,38 @@
 
       <form class="d-flex justify-content-evenly second-form">
         <span class="row">
-          <div class="col-md-3">
+          <div class="col-md-2">
             <label for="underline-input">Your salary :</label>
             <input type="text" id="underline-input" class="underline-input" />
           </div>
 
-          <span class="col-md-3">
+          <span class="col-md-2">
             <label for="inputName" class="form-label">Name</label>
             <input type="text" class="form-control" id="inputName" />
           </span>
-          <span class="col-md-3">
+          <span class="col-md-2">
             <label for="amount" class="form-label">Amount</label>
             <input type="number" class="form-control" id="amount" />
           </span>
-          <div class="col-md-3">
+          <div class="col-md-2">
+            <button type="button" class="log-button" id="log-button">
+              submit
+            </button>
+          </div>
+          <div class="col-md-2">
             <button
               type="button"
-              onclick="addRow()"
+              onclick="subtractAmount()"
               class="log-button"
-              id="log-button"
+              id="check-button"
             >
-              submit
+              check your balance
             </button>
           </div>
         </span>
       </form>
 
-      <p id="display-results">Hey Mellow</p>
+      <p id="display-results"></p>
     </div>
     <script src="/src/script.js"></script>
   </body>

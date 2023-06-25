@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amount Subtraction</title>
+    <script>
+      function subtractAmount() {
+        // Get the input values from the user
+        var initialAmountInput = document.getElementById("initialAmount");
+        var finalAmountInput = document.getElementById("finalAmount");
+
+        var initialAmount = parseFloat(initialAmountInput.value);
+        var finalAmount = parseFloat(finalAmountInput.value);
+
+        // Subtract the final amount from the initial amount
+        var remainingAmount = initialAmount - finalAmount;
+
+        // Update the result on the page
+        var resultElement = document.getElementById("result");
+        resultElement.textContent =
+          "Remaining Amount: $" + remainingAmount.toFixed(2);
+
+        // Clear the input fields
+        initialAmountInput.value = "";
+        finalAmountInput.value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Amount Subtraction</h1>
+
+    <label for="initialAmount">Enter Initial Amount:</label>
+    <input type="number" id="initialAmount" />
+
+    <label for="finalAmount">Enter Final Amount:</label>
+    <input type="number" id="finalAmount" />
+
+    <button onclick="subtractAmount()">Subtract</button>
+
+    <p id="result">Remaining Amount: $0.00</p>
+  </body>
+</html>

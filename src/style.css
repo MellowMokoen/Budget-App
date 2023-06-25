@@ -79,7 +79,7 @@ label{
     box-shadow: var(--box-shadow);
 }
 
-#display-amount{
+#display-results{
     text-align: center;
     margin-top: 60px;
     font-size: 20px;
