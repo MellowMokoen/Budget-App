@@ -1,0 +1,23 @@
+<script>
+  function displayAmount(event) {
+    event.preventDefault();
+
+    let inputName = document.querySelector("#inputName");
+    let inputAmount = document.querySelector("#amount");
+    let amount = parseFloat(inputAmount.value).toFixed(2);
+
+    let userInput = inputName.value + " : " + "R " + amount;
+
+    let displayElement = document.createElement("li");
+    displayElement.textContent = userInput;
+
+    let displayName = document.querySelector("#display-results");
+    displayName.appendChild(displayElement);
+
+    inputName.value = "";
+    inputAmount.value = "";
+  }
+
+  let button = document.querySelector("#log-button");
+  button.addEventListener("click", displayAmount);
+</script>

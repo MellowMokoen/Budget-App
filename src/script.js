@@ -1,21 +1,28 @@
 function displayAmount(event) {
    event.preventDefault();
 
+
   let inputName = document.querySelector("#inputName");
   let inputAmount = document.querySelector("#amount");
   let amount = parseFloat(inputAmount.value).toFixed(2);
 
-  let userInput = (inputName.value) + " : " + "R " + amount;
+  let userInput =  inputName.value;
 
 
-  let displayElement = document.createElement("li");
-  displayElement.textContent = userInput;
+  let displayNameElement = document.createElement("li");
+  let displayAmountElement = document.createElement("li");
+
+  displayAmountElement.classList.add("rands");
+  displayAmountElement.textContent = amount;
+
+  displayNameElement.classList.add("name");
+  displayNameElement.textContent = userInput;
 
   let displayName = document.querySelector("#display-name");
-  displayName.appendChild(displayElement);
+  displayName.appendChild(displayNameElement);
 
-  let displayAmount = document.querySelector("#display-amount");
-  displayAmount.appendChild(displayElement);
+  let displayRands = document.querySelector("#display-amount");
+  displayRands.appendChild(displayAmountElement);
 
   inputName.value = "";
   inputAmount.value = "";
@@ -36,7 +43,7 @@ let amount = parseFloat(inputAmount.textContent);
 let finalAmount = userSalary - amount;
 
 let resultAmount = document.querySelector("#balance-check");
-resultAmount.textContent = "Expenses Total : R " + finalAmount.toFixed(2);
+resultAmount.textContent = finalAmount.toFixed(2);
 
 
 inputAmount.value = "";
