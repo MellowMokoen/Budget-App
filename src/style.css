@@ -22,10 +22,10 @@
 }
 
 :root{
-    --primary-color: rgb(248, 130, 149);
+    --primary-color: #F65282;
     --secondary-color: rgb(29, 173, 29);
     --box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
-    --background: rgb(252, 221, 195);
+    --background: #FFEEC4;
 }
     
 
@@ -82,8 +82,16 @@ label{
 #display-results{
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 400px;
     font-size: 20px;
     font-weight: 600;
     font-family: cursive;
     color: var(--secondary-color);
+}
+
+p2{
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 800;
+  
 }
