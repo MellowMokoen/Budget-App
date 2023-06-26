@@ -9,8 +9,9 @@ function displayAmount(event) {
   let userInput =  inputName.value;
 
 
-  let displayNameElement = document.createElement("li");
-  let displayAmountElement = document.createElement("li");
+  let displayNameElement = document.createElement("span");
+  let displayAmountElement = document.createElement("span");
+  let newLine = document.createElement("br");
 
   displayAmountElement.classList.add("rands");
   displayAmountElement.textContent = amount;
@@ -18,11 +19,10 @@ function displayAmount(event) {
   displayNameElement.classList.add("name");
   displayNameElement.textContent = userInput;
 
-  let displayName = document.querySelector("#display-name");
-  displayName.appendChild(displayNameElement);
-
-  let displayRands = document.querySelector("#display-amount");
-  displayRands.appendChild(displayAmountElement);
+  let appendResult = document.querySelector("#display-results");
+  appendResult.appendChild(newLine);
+  appendResult.appendChild(displayNameElement);
+  appendResult.appendChild(displayAmountElement);
 
   inputName.value = "";
   inputAmount.value = "";
