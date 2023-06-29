@@ -1,12 +1,45 @@
+
+function authenticate(){
+  let username = document.querySelector("#inputEmail").value;
+  let password = document.querySelector("#inputPassword").value;
+
+  fetch("api/login",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: username,
+      password: password
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+
+    if (data.success){
+      console.log("Authentification successful");
+
+    } else{
+      console.log("Authentification failed");
+    }
+    })
+   
+  .catch(error => {
+    console.log("Error", error);
+  });
+}
+document.querySelector(".main-form").addEventListener("submit" , function(event){
+  event.preventDefault();
+  authenticate();
+});
+
+
 function displayAmount(event) {
    event.preventDefault();
 
 
   let inputName = document.querySelector("#inputName");
   let inputAmount = document.querySelector("#amount");
-  let amount = parseFloat(inputAmount.value).toFixed(2);
-
-  let userInput =  inputName.value;
 
 
   let displayNameElement = document.createElement("span");
@@ -14,10 +47,10 @@ function displayAmount(event) {
   let newLine = document.createElement("br");
 
   displayAmountElement.classList.add("rands");
-  displayAmountElement.textContent = amount;
+  displayAmountElement.textContent = parseFloat(inputAmount.value).toFixed(2);
 
   displayNameElement.classList.add("name");
-  displayNameElement.textContent = userInput;
+  displayNameElement.textContent = inputName.value;
 
   let appendResult = document.querySelector("#display-results");
   appendResult.appendChild(newLine);
@@ -35,7 +68,7 @@ button.addEventListener("click",displayAmount);
 function subtractAmount() {
 
 let inputSalary = document.querySelector("#underline-input");
-let inputAmount = document.querySelector("#display-amount");
+let inputAmount = document.querySelector(".rands");
 
 let userSalary = parseFloat(inputSalary.value);
 let amount = parseFloat(inputAmount.textContent);
@@ -47,6 +80,7 @@ resultAmount.textContent = finalAmount.toFixed(2);
 
 
 inputAmount.value = "";
+
 }
 
 
